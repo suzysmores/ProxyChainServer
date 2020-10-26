@@ -37,14 +37,9 @@ const server = new ProxyChain.Server({
             // Require clients to authenticate with username 'bob' and password 'TopSecret'
             requestAuthentication: username !== 'bob' || password !== 'TopSecret',
  
-            // Sets up an upstream HTTP proxy to which all the requests are forwarded.
-            // If null, the proxy works in direct mode, i.e. the connection is forwarded directly
-            // to the target server. This field is ignored if "requestAuthentication" is true.
-            upstreamProxyUrl: `http://username:password@proxy.example.com:3128`,
- 
             // If "requestAuthentication" is true, you can use the following property
             // to define a custom error message instead of the default "Proxy credentials required"
-            failMsg: 'Bad username or password, please try again.',
+            //failMsg: 'Bad username or password, please try again.',
         };
     },
 });
